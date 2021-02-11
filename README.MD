@@ -1,4 +1,4 @@
-# Authentication and Authorization training
+# Authentication and Authorization trainning
 
 Project created to practice the development of authentication and authorization services using tokens JWT. Built with Node.JS and the framework express. The database used was MongoDB, managed with mongoose.
 ## Technologies
