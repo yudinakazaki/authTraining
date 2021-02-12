@@ -17,7 +17,7 @@ router.get('/', ensureAuthentication, async (request, response) => {
 
 router.put('/', ensureAuthentication, async (request, response) => {
   const { error } = validateUpdateUser(request.body)
-  if(error) return response.status(404).send(error.details[0].message)
+  if(error) return response.status(400).send(error.details[0].message)
 
   if(request.body.email){
     const isAlreadyRegisterd = await User.findOne({ email: request.body.email })

@@ -73,6 +73,9 @@ describe('/api/login', () => {
   it('should return 200 it the login is valid', async () => {
     const response = await login()
 
+    const passwordCompare = await bcrypt.compare(password, user.password)
+
     expect(response.status).toBe(200)
+    expect(passwordCompare).toBe(true)
   })
 })
