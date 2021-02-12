@@ -9,4 +9,9 @@ require('./startup/db')()
 require('./startup/routes')(app)
 
 port = process.env.PORT || 3000
-app.listen(port, () => winston.info('Serve is running'))
+
+if(process.env.NODE_ENV !== 'test'){
+  app.listen(port, () => winston.info('Serve is running'))
+}
+
+module.exports = app

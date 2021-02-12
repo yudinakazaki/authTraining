@@ -2,7 +2,7 @@ const express = require('express')
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
 
-const { User, validateUser } = require('../models/users')
+const { User } = require('../models/users')
 const { validatePassword, validateUpdateUser } = require('../models/profile')
 
 const ensureAuthentication = require('../middlewares/ensureAuthentication')
